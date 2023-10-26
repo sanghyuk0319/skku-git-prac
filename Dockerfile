@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 RUN python manage.py makemigrations
 RUN python manage.py migrate
 
-RUN chmod 777 /user/src/app
+RUN chmod 777 -R /user/src/app
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
 
